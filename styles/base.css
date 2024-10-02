@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+    --primary-color: #d5e7f3cc;
+    --secondary-color: #3B6F91;
+    --accent1-color: #193F58;
+    --accent2-color: #21455E;
+
+    --heading-font: 'Roboto', sans-serif;
+    --paragraph-font: 'Open Sans', sans-serif;
+
+    --nav-background-color: black;
+    --nav-link-color: white;
+    --nav-hover-background-color: #0066FF;
+    --nav-hover-link-color: #EFEFEF;
+
+}
+
+body {
+    font-family: var(--paragraph-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    font-size: 2em;
+}
+
+header {
+    text-align: center;
+    align-items: center;
+    background-color: var(--accent1-color);
+    color: white;
+
+}
+
+h1 {
+    color: white;
+    background-color: var(--accent1-color);
+    padding: 2em;
+    text-align: center;
+    align-content: center;
+
+}
+
+nav {
+    display: flex;
+    background-color: var(--nav-background-color);
+    justify-content: space-evenly;
+
+}
+
+nav a {
+    color: var(--nav-link-color);
+
+    display: block;
+    padding: 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+nav a:link,
+nav a:visited {
+    color: var(--nav-link-color);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+main {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between cards */
+    max-width: 75%; /* Limit the width of the grid */
+    margin: 0 auto; /* Center the grid on the screen */
+    padding: 20px; /* Add padding inside the grid */
+}
+
+.card {
+    display: grid; /* Use CSS Grid for card content layout */
+    grid-template-rows: auto 1fr; /* Two rows: one for the heading and one for content */
+    background-color: var(--primary-color);
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    padding: 20px; /* Add padding inside cards */
+}
+
+.about-me-card {
+    grid-column: span 2; /* Make the About Me card span across two columns */
+}
+
+/* Optional: Style for images and text in the About Me section */
+.about-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    gap: 20px; /* Space between text and image */
+}
+
+.about-content img {
+    width: 200px; /* Set the width for the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.box {
+    overflow: auto; /* Clear floats */
+    padding: 10px; /* Add some padding */
+}
+
+.box img {
+    width: 200px; /* Set the width for the image */
+    height: auto; /* Maintain aspect ratio */
+    float: left; /* Position the image to the right */
+    margin-left: 10px; /* Optional: add space between the image and text */
+}
+
+.box p {
+    /* Optional: add some styles for the text */
+    margin: 0; /* Reset margins */
+    line-height: 1.5; /* Improve readability */
+}
+
+footer {
+    background-color: var(--accent1-color);
+    color: white;
+    text-align: center;
+    padding: 1em;
+    font-size: 2em;
+}
