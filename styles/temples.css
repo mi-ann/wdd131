@@ -46,30 +46,41 @@ body {
 }
 
 header {
-    background-color: var(--accent1-color);
+    display: flex;
+    justify-content: space-between; /* Title left, nav right */
+    align-items: center; /* Center vertically */
+    background-color: var(--accent1-color); /* Your existing header color */
     color: white;
     padding: 1em;
-    text-align: center;
 }
 
 nav {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: var(--nav-background-color);
-}
-nav a {
-    color: white;
-    text-decoration: none;
-    
-    padding: 10px;
+    flex-direction: row;
+    align-items: center; /* Center items vertically */
+    ; /* Use your nav background color */
 }
 
+#nav-menu {
+    display: flex; /* Use flex for horizontal alignment */
+    list-style-type: none;
+    padding: 0;
+}
+
+#nav-menu li {
+    margin: 0 1em; /* Adjust margin for spacing */
+}
+
+nav a {
+    color: white; /* Your existing link color */
+    text-decoration: none;
+    padding: 10px; /* Spacing around links */
+    font-weight: 400;
+}
 
 nav a:hover {
-    background-color: var(--nav-hover-background-color); /* Change background on hover */
-
+    background-color: var(--nav-background-color); /* Change background on hover */
+     /* Change text color on hover */
 }
 
 #hamburger {
@@ -87,9 +98,7 @@ nav a:hover {
     padding: 0;
 }
 
-#nav-menu li {
-    margin: 0.5em 0;
-}
+
 
 #nav-menu a {
     color: white;
@@ -97,14 +106,30 @@ nav a:hover {
 }
 
 main {
-    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 2em auto;
     padding: 1em;
+    margin-top: 20px;
+}
+
+main h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    display: block; /* Ensure it takes full width */
+}
+
+
+
+.figure-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em; /* Space between grid items */
 }
 
 figure {
-    margin: 0;
-    text-align: center;
+    margin: 0; /* Reset margin for figures */
+    text-align: center; /* Center align captions */
 }
 
 footer {
