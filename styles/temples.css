@@ -1,5 +1,44 @@
+:root {
+    --primary-color: #d5e7f3cc;
+    --secondary-color: #3B6F91;
+    --accent1-color: #193F58;
+    --accent2-color: #21455E;
+
+    --heading-font: 'Roboto', sans-serif;
+    --heading-font-weight: 500;
+    --paragraph-font: 'Roboto', sans-serif;
+    --paragraph-font-weight: 400;
+
+    --nav-background-color: black;
+    --nav-link-color: white;
+    --nav-hover-background-color: #0066FF;
+    --nav-hover-link-color: #EFEFEF;
+
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--paragraph-font);
+    font-weight: var(--paragraph-font-weight);
+}
+
+p{
+    font-family: var(--paragraph-font);
+    font-weight: var(--paragraph-font-weight);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    font-weight: var(--heading-font-weight);
+    font-size: 2em;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #000000;
@@ -7,7 +46,7 @@ body {
 }
 
 header {
-    background-color: #265628;
+    background-color: var(--accent1-color);
     color: white;
     padding: 1em;
     text-align: center;
@@ -18,17 +57,18 @@ nav {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    background-color: var(--nav-background-color);
 }
 nav a {
     color: white;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    
     padding: 10px;
 }
 
 
 nav a:hover {
-    background-color: rgb(10, 11, 10); /* Change background on hover */
+    background-color: var(--nav-hover-background-color); /* Change background on hover */
 
 }
 
@@ -70,6 +110,6 @@ figure {
 footer {
     text-align: center;
     padding: 1em;
-    background-color: #265628;
+    background-color: var(--accent1-color);
     color: white;
 }
