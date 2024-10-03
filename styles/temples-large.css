@@ -1,0 +1,33 @@
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+        padding: 10px;
+    }
+    #nav-menu {
+        display: flex; /* Show menu in larger view */
+    }
+
+    #hamburger {
+        display: none; /* Hide hamburger button */
+    }
+
+    #nav-menu li {
+        margin: 0 1em;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1em;
+    }
+
+    figure {
+        margin: 0;
+    }
+}

@@ -1,0 +1,75 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: white;
+}
+
+header {
+    background-color: #265628;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+    padding: 10px;
+}
+
+
+nav a:hover {
+    background-color: rgb(10, 11, 10); /* Change background on hover */
+
+}
+
+#hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    display: block;
+}
+
+#nav-menu {
+    display: none; /* Hidden by default */
+    list-style-type: none;
+    padding: 0;
+}
+
+#nav-menu li {
+    margin: 0.5em 0;
+}
+
+#nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #265628;
+    color: white;
+}
