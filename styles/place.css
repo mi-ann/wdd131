@@ -1,0 +1,129 @@
+:root {
+    --primary-green: #00270f; /* Green */
+    --primary-red: #751b15; /* Red */
+    --accent-white: #FFFFFF; /* White for highlights */
+    --background-color: #f0f0f0; /* Light background */
+    --text-color: #333; /* Dark text color */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Default font size for larger screens */
+}
+
+header {
+    background-color: var(--primary-red);
+    color: var(--accent-white);
+    padding: 20px;
+    text-align: center;
+}
+
+.data p, .weather p {
+    margin-bottom: 15px; /* Space between paragraphs */
+    letter-spacing: 1px; /* Space between letters */
+    line-height: 1.5; /* Space between lines */
+}
+
+.weather-icon {
+    display: none; /* Hide by default */
+}
+
+.hero {
+    margin:auto;
+    position: relative;
+    width: 80%;
+    height: auto; /* Or 100vh for larger screens */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.responsive-img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the image covers the area */
+}
+
+
+
+.data h2, .weather h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-green); /* Green background */
+    color: var(--accent-white); /* Change text color to white for contrast */
+    padding: 10px; /* Add some padding */
+}
+
+footer {
+    background-color: var(--primary-red);
+    color: var(--accent-white);
+    text-align: center;
+    padding: 10px;
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Slightly smaller font size */
+    }
+
+    .hero {
+        height: 50vh; /* Set height for mobile */
+    }
+
+    .data, .weather {
+        width: 90%; /* Take up more width on small screens */
+        margin: 10px auto; /* Center elements */
+        padding: 10px; /* Adjust padding */
+    }
+
+    #weather-icon-mobile {
+        display: inline-block; /* Show mobile SVG icon */
+    }
+}
+
+@media (min-width: 601px) {
+    .container {
+        width: 1800px;
+        margin: auto;
+    }
+
+    body {
+        font-size: 16px; /* Default font size for larger screens */
+    }
+
+    .hero {
+        width: 100%;
+        height: auto; /* Full height for larger screens */
+    }
+
+    .data {
+        position: absolute;
+        top: 20%; /* Adjust as needed */
+        left: 5%; /* Adjust as needed */
+        background-color: rgba(255, 255, 255, 0.904); /* Semi-transparent background for better visibility */
+        padding: 20px;
+        border-radius: 5px;
+        width: 300px;
+        height: 400px;
+        text-align: center;
+    }
+
+    .weather {
+        position: absolute; /* Absolute positioning */
+        bottom: 1%; /* Distance from the bottom of the hero */
+        left: 83%; /* Distance from the left of the hero */
+        background-color: rgba(255, 255, 255, 0.904); /* Semi-transparent background for readability */
+        padding: 20px; /* Padding for the content */
+        border-radius: 5px; /* Rounded corners */
+    }
+
+    .weather-icon {
+        display: inline; /* Show the icon for wider views */
+    }
+
+    #weather-icon-mobile {
+        display: none; /* Hide mobile icon in wider view */
+    }
+}
