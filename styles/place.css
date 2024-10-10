@@ -9,7 +9,7 @@
 body {
     background-color: var(--background-color);
     color: var(--text-color);
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px; /* Default font size for larger screens */
 }
 
@@ -81,6 +81,13 @@ footer {
     #weather-icon-mobile {
         display: inline-block; /* Show mobile SVG icon */
     }
+    .weather h2::after {
+        content: url('images/sunny.svg'); /* Use your icon's path */
+        width: 50px; /* Adjust size as needed */
+        height: 50px; /* Adjust size as needed */
+        margin-left: 10px; /* Space between heading and icon */
+        display: inline-block; /* Ensure it displays inline */
+    }
 }
 
 @media (min-width: 601px) {
@@ -126,4 +133,8 @@ footer {
     #weather-icon-mobile {
         display: none; /* Hide mobile icon in wider view */
     }
+    .weather h2::after {
+        content: ''; /* Hide icon for mobile if necessary */
+    }
+
 }

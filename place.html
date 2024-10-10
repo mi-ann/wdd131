@@ -7,6 +7,8 @@
     <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Mi-ann Loisa Wirjosentono WDD 131 place page.">
     <meta name="author" content="Mi-ann Loisa Wirjosentono">
     <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script defer src="scripts/place.js"></script>
 </head>
 <body>
@@ -14,45 +16,42 @@
         <header>
             <h1>Suriname</h1>
         </header>
-    
-    <section class="hero">
-        <picture>
-            <source srcset="images/jaguar.webp 10w" media="(max-width: 600px)">
-            <source srcset="images/suriname-medium.webp 1000w" media="(max-width: 1200px)">
-            <img src="images/hero_img.webp" alt="Beautiful landscape of Suriname" class="responsive-img" width="1800" height="900">
-        </picture>
-    </section>
-
-    <section class="data">
-        <h2>Data</h2>
-        <p><strong>Area:</strong> 163,820 km²</p>
-        <p><strong>Population:</strong> ~600,000</p>
-        <p><strong>Capital:</strong> Paramaribo</p>
-        <p><strong>Languages:</strong> Dutch</p>
-        <p><strong>Currency:</strong> Surinamese Dollar (SRD)</p>
-        <p><strong>Timezone:</strong> AST (UTC-3)</p>
-        <p><strong>Calling Code:</strong> +597</p>
-        <p><strong>Internet TLD:</strong> .sr</p>
         
-    </section>
+        <main>
+            <section class="hero">
+                <picture>
+                    <source srcset="images/jaguar.webp 500w" media="(max-width: 600px)" sizes="(max-width: 600px) 500px">
+                    <source srcset="images/suriname-medium.webp 1000w" media="(max-width: 1200px)" sizes="(max-width: 1200px) 1000px">
+                    <img src="images/hero_img.webp" alt="Beautiful landscape of Suriname" class="responsive-img" width="1800" height="900">
+                </picture>
+            </section>
 
-    <section class="weather">
-        <h2>Weather 
-            <span class="weather-icon" id="weather-icon-mobile">
-                <img src="images/sunny.svg" alt="Weather Icon" width="50" height="50">
-            </span>
-            <span class="weather-icon" id="weather-icon-wide">☀️</span>
-        </h2>
-        <p><strong>Temperature:</strong> 30°C</p>
-        <p><strong>Conditions:</strong> Sunny</p>
-        <p><strong>Wind:</strong> 15 km/h</p>
-        <p><strong>Windchill:</strong> <span id="windchill-value"></span></p>
-    </section>
+            <section class="data">
+                <h2>Data</h2>
+                <p><strong>Area:</strong> 163,820 km²</p>
+                <p><strong>Population:</strong> ~600,000</p>
+                <p><strong>Capital:</strong> Paramaribo</p>
+                <p><strong>Languages:</strong> Dutch</p>
+                <p><strong>Currency:</strong> Surinamese Dollar (SRD)</p>
+                <p><strong>Timezone:</strong> AST (UTC-3)</p>
+                <p><strong>Calling Code:</strong> +597</p>
+                <p><strong>Internet TLD:</strong> .sr</p>
+                
+            </section>
+
+            <section class="weather"> 
+                <h2 id="weather-heading">Weather</h2>
+                <p><strong>Temperature:</strong> 30°C</p>
+                <p><strong>Conditions:</strong> Sunny</p>
+                <p><strong>Wind:</strong> 15 km/h</p>
+                <p><strong>Windchill:</strong> <span id="windchill-value"></span></p>
+            </section>
+        </main>
     
-    <footer>
-        <p>© <span id="currentyear"></span> 🌴 Mi-ann Wirjosentono 🌴 Wanica, Suriname</p>
-        <p id="lastModified"></p>
-    </footer>
+        <footer>
+            <p>© <span id="currentyear"></span> 🌴 Mi-ann Wirjosentono 🌴 Wanica, Suriname</p>
+            <p id="lastModified"></p>
+        </footer>
     </div>
 </body>
 
