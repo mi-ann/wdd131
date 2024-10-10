@@ -78,16 +78,10 @@ footer {
         padding: 10px; /* Adjust padding */
     }
 
-    #weather-icon-mobile {
+    .weather-icon {
         display: inline-block; /* Show mobile SVG icon */
     }
-    .weather h2::after {
-        content: url('images/sunny.svg'); /* Use your icon's path */
-        width: 50px; /* Adjust size as needed */
-        height: 50px; /* Adjust size as needed */
-        margin-left: 10px; /* Space between heading and icon */
-        display: inline-block; /* Ensure it displays inline */
-    }
+    
 }
 
 @media (min-width: 601px) {
@@ -126,15 +120,12 @@ footer {
         border-radius: 5px; /* Rounded corners */
     }
 
-    .weather-icon {
-        display: inline; /* Show the icon for wider views */
-    }
 
-    #weather-icon-mobile {
+    .weather-icon {
         display: none; /* Hide mobile icon in wider view */
     }
     .weather h2::after {
-        content: ''; /* Hide icon for mobile if necessary */
+        content: '☀️'; /* Hide icon for mobile if necessary */
     }
 
 }
