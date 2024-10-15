@@ -7,17 +7,25 @@
 }
 
 body {
-    background-color: var(--background-color);
-    color: var(--text-color);
     font-family: 'Roboto', sans-serif;
     font-size: 16px; /* Default font size for larger screens */
+    margin: 0;
+    padding: 0;
 }
 
 header {
+    display: flex;
     background-color: var(--primary-red);
     color: var(--accent-white);
-    padding: 20px;
-    text-align: center;
+    padding: 2em;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+
+main{
+    padding: 1em;
 }
 
 .data p, .weather p {
@@ -31,11 +39,9 @@ header {
 }
 
 .hero {
-    margin:auto;
     position: relative;
-    width: 80%;
+    width: 100%;
     height: auto; /* Or 100vh for larger screens */
-    overflow: hidden; /* Prevent overflow */
 }
 
 .responsive-img {
@@ -59,23 +65,13 @@ footer {
     background-color: var(--primary-red);
     color: var(--accent-white);
     text-align: center;
-    padding: 10px;
+    padding: 1em;
 }
 
 /* Media queries */
 @media (max-width: 600px) {
-    body {
-        font-size: 14px; /* Slightly smaller font size */
-    }
-
-    .hero {
-        height: 50vh; /* Set height for mobile */
-    }
-
     .data, .weather {
-        width: 90%; /* Take up more width on small screens */
-        margin: 10px auto; /* Center elements */
-        padding: 10px; /* Adjust padding */
+    text-align: center;
     }
 
     .weather-icon {
@@ -96,7 +92,7 @@ footer {
 
     .hero {
         width: 100%;
-        height: auto; /* Full height for larger screens */
+        height: 0 auto; /* Full height for larger screens */
     }
 
     .data {
