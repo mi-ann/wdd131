@@ -92,7 +92,7 @@ footer {
 
     .hero {
         width: 100%;
-        height: 0 auto; /* Full height for larger screens */
+        height: auto; /* Full height for larger screens */
     }
 
     .data {
