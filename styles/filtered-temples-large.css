@@ -1,0 +1,59 @@
+@media (min-width: 520px) {
+    nav {
+        flex-direction: row;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+    }
+    #nav-menu {
+        display: flex; /* Show menu in larger view */
+    }
+
+    #hamburger {
+        display: none; /* Hide hamburger button */
+    }
+
+    #nav-menu li {
+        margin: 0 1em;
+    }
+
+    main {
+        width: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    h2 {
+        text-align: center;
+        grid-column: span 3; /* Ensure heading spans all columns */
+        grid-row: 1/2;
+    }
+    
+    .figure-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        gap: 20px; /* Space between cards */
+        margin: 0 auto; /* Center the grid */
+        padding: 20px; /* Optional padding */
+    }
+    
+    .temple-card {
+        width: 300px;
+        border: 1px solid #ccc; /* Optional styling for the cards */
+        border-radius: 5px; /* Optional rounded corners */
+        padding: 10px; /* Optional padding inside cards */
+        text-align: center; /* Center text */
+    }
+
+    header,footer{
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    
+}

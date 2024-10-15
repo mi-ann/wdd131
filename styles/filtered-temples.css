@@ -1,0 +1,143 @@
+:root {
+    --primary-color: #d5e7f3cc;
+    --secondary-color: #3B6F91;
+    --accent1-color: #193F58;
+    --accent2-color: #21455E;
+
+    --heading-font: 'Roboto', sans-serif;
+    --heading-font-weight: 500;
+    --paragraph-font: 'Roboto', sans-serif;
+    --paragraph-font-weight: 400;
+
+    --nav-background-color: black;
+    --nav-link-color: white;
+    --nav-hover-background-color: #0066FF;
+    --nav-hover-link-color: #EFEFEF;
+
+}
+
+body {
+    font-family: var(--paragraph-font);
+    font-weight: var(--paragraph-font-weight);
+}
+
+p{
+    font-family: var(--paragraph-font);
+    font-weight: var(--paragraph-font-weight);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+    font-weight: var(--heading-font-weight);
+    font-size: 2em;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Title left, nav right */
+    align-items: center; /* Center vertically */
+    background-color: var(--accent1-color); /* Your existing header color */
+    color: white;
+    padding: 1em;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Center items vertically */
+    ; /* Use your nav background color */
+}
+
+#nav-menu {
+    display: flex; /* Use flex for horizontal alignment */
+    list-style-type: none;
+    padding: 0;
+}
+
+#nav-menu li {
+    margin: 0 1em; /* Adjust margin for spacing */
+}
+
+nav a {
+    color: white; /* Your existing link color */
+    text-decoration: none;
+    padding: 10px; /* Spacing around links */
+    font-weight: 400;
+}
+
+nav a:hover {
+    background-color: var(--nav-background-color); /* Change background on hover */
+     /* Change text color on hover */
+}
+
+#hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    display: block;
+}
+
+#nav-menu {
+    display: none; /* Hidden by default */
+    list-style-type: none;
+    padding: 0;
+}
+
+
+
+#nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em auto;
+    padding: 1em;
+    margin-top: 20px;
+}
+
+main h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    display: block; /* Ensure it takes full width */
+}
+
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: var(--accent1-color);
+    color: white;
+}
+.temple-card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px;
+    text-align: center;
+}
+
+.temple-card img {
+    max-width: 300px;
+    height: auto;
+       /* Set maaximum width */     
+    border-radius: 4px;
+}
