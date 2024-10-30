@@ -1,0 +1,180 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #cfcfcf;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+}
+
+/* stars */
+input[type="radio"]{
+    display: none;
+    position: relative;
+
+}
+
+
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-self: center;
+    width: 93%;
+    max-width: 400px;
+    margin-left: 10px;
+    border-bottom: solid 8px red;
+}
+
+.error-message {
+    color: rgb(27, 0, 0);
+    background-color: white;
+    display: none; /* Hidden by default */
+    border: 1px solid red; /* Red border */ 
+    padding: 10px; /* Padding for spacing */
+    margin-top: 5px; /* Space above the message */
+    width: fit-content; /* Fit to content */
+    width: 93%;
+    max-width: 400px;
+    margin-left: 10px;
+}
+
+.stars>label {
+    /* Width for clickable area */
+    height: 50px;
+    /* Height for clickable area */
+    font-size: 2rem !important;
+    /* Set to a more reasonable size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Center the star */
+    cursor: pointer;
+    /* Change cursor to pointer for better UX */
+}
+
+.stars>label:hover {
+    color: #000;
+    /* This still applies for hover */
+}
+
+.stars>label::before {
+    content: "\2606";
+    /* Empty star */
+}
+
+.stars input:checked~label::before {
+    content: "\2605";
+    /* Filled star */
+}
+
+.stars input:checked+label,
+.stars input:checked+label~label {
+    color: #FFD700;
+    /* All checked and previous stars stay gold */
+}
+
+.wf1 fieldset {
+    margin: 2rem 0;
+    padding: .5rem 2%;
+}
+
+.wf1 label {
+    display: block;
+    padding: 0 .5rem;
+    margin-top: 20px;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+
+.wf1 input[type="text"],
+.wf1 textarea,
+.wf1 select,
+.wf1 input[type="date"] {
+    background-color: #ffffff;
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: .75rem;
+    width: 100%;
+    max-width: 400px;
+    appearance: none;
+}
+
+.wf1 input[type="checkbox"] {
+    margin-right: 6px;
+    font-weight: 100;
+}
+
+.wf1 .checkbox{
+    display: block;
+    padding: .5rem .5rem;
+    margin-top: 20px;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    
+}
+
+/* Specific styles for each checkbox label */
+.feature-label.durability,
+.feature-label.design,
+.feature-label.performance,
+.feature-label.ease {
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+
+.wf1 input[type="submit"] {
+    border: 1px solid;
+    background-image: linear-gradient(#9c2c13, #FFA500);
+    color: #fff;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 96%;
+    max-width: 400px;
+    margin: .5rem 2% 2rem 2.5%;
+    box-shadow: 1px 1px 4px #999;
+}
+
+.wf1 input:required, 
+.wf1 select:required{
+    border-bottom: solid 8px red;
+}
+
+.wf1 input:required:valid,
+.wf1 select:required:valid,
+.stars.active {
+    border-bottom: solid 8px green;
+}
+ 
+/*----------- FOOTER --------------*/
+footer,
+header {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    font-size: 1em;
+    width: 100%;
+}

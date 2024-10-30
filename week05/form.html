@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product review Form</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals, Mi-ann Loisa Wirjosentono WDD 131 Form.">
+    <meta name="author" content="Mi-ann Loisa Wirjosentono">
+    <link rel="stylesheet" href="styles/form.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script defer src="scripts/form.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    
+    <main>
+        <form method="get" action="review.html" class="wf1">
+            <fieldset>
+                <label>Product Name
+                    <select id="product" name="product" required>
+                        <option value="" disabled selected>Select a Product ... &#9662; </option>
+                        <!-- Add product options here -->
+                    </select>
+                </label>
+
+                <label>Overall Rating</label>    
+                <div class="stars" id="star-rating"> 
+                    <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
+                    <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
+                    <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
+                    <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
+                    <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+                    
+                </div>
+                <div class="error-message">Please select a star rating.</div>
+                
+                <!-- Date of Installation -->
+                <label for="installDate">Date of Installation:<input type="date" id="installDate" name="installDate" required></label>
+        
+                <!-- Useful Features -->
+                <div class="checkbox">Which features did you find useful in the product? (Check all that apply)</div>
+                <label class="feature-label durability"><input type="checkbox" id="durability" name="features" value="Durability"> Durability</label>
+                <label class="feature-label ease"><input type="checkbox" id="ease" name="features" value="Ease Of Use"> Ease Of Use</label>
+                <label class="feature-label performance"><input type="checkbox" id="performance" name="features" value="Performance"> Performance</label>
+                <label class="feature-label design"><input type="checkbox" id="design" name="features" value="Design"> Design</label>
+                                
+                
+        
+                <!-- Written Review -->
+                <label for="review">Written Review (optional) <textarea id="review" name="review"></textarea></label>
+            </fieldset>
+            
+            <fieldset>
+                <label for="userName">Your Name (optional) <input type="text" id="userName" name="userName"></label>
+            </fieldset>
+            <!-- User Name -->
+            
+            
+    
+            <!-- Form Submission Button -->
+            <input type="submit" value="Post Review" id="submit-button">
+        </form>
+        
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="year"></span> 🌴 Mi-ann Wirjosentono 🌴 Wanica, Suriname</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>

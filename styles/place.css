@@ -82,7 +82,7 @@ footer {
 
 @media (min-width: 601px) {
     .container {
-        width: 1800px;
+        max-width: 1800px;
         margin: auto;
     }
 
@@ -91,13 +91,14 @@ footer {
     }
 
     .hero {
-        width: 100%;
+        max-width: 100%;
+        min-width: 601px;
         height: auto; /* Full height for larger screens */
     }
 
     .data {
         position: absolute;
-        top: 20%; /* Adjust as needed */
+        top: 30%; /* Adjust as needed */
         left: 5%; /* Adjust as needed */
         background-color: rgba(255, 255, 255, 0.904); /* Semi-transparent background for better visibility */
         padding: 20px;
