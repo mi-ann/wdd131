@@ -1,0 +1,32 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+h1, h2 {
+    color: #003366; /* Primary Color */
+}
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+.color-scheme {
+    display: flex;
+}
+.color-box {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+.color1 {
+    background-color: #003366; /* Primary Color */
+}
+.color2 {
+    background-color: #FFA500; /* Accent Color */
+}
