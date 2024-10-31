@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Creative Arts Hub - Join</title>
+        <meta name="description"
+            content="WDD 131 - Dynamic Web Fundamentals, Mi-ann Loisa Wirjosentono WDD 131 Website project.">
+        <meta name="author" content="Mi-ann Loisa Wirjosentono">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/style-large.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <script defer src="scripts/script.js"></script>
+    </head>
+</head>
+<body>
+    <header>
+        <h1>Join the Creative Arts Hub</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Subscribe or Become a Member</h2>
+            <form action="thankyou.html" method="get">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="phone">Phone Number (optional):</label>
+                    <input type="tel" id="phone" name="phone">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Membership Type</legend>
+                    
+                    <p>Choose your membership type:</p>
+                    <label>
+                        <input type="radio" name="membership" value="subscribe" required> Subscribe for Updates
+                    </label><br>
+                    <label>
+                        <input type="radio" name="membership" value="member"> Become a Member
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Membership Preferences</legend>
+                    
+                    <p>Preferred Type of Membership:</p>
+                    <label>
+                        <input type="radio" name="type" value="art" required> Art
+                    </label><br>
+                    <label>
+                        <input type="radio" name="type" value="dance"> Dance
+                    </label><br>
+                    <label>
+                        <input type="radio" name="type" value="piano"> Piano
+                    </label><br>
+                    <label>
+                        <input type="radio" name="type" value="all"> All
+                    </label>
+                </fieldset>
+
+                <input type="submit" value="Join Now">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> 🌴 Mi-ann Wirjosentono 🌴 Wanica, Suriname</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+        <nav class="sociallinks">
+            <a href="https://facebook.com">
+                <img src="images/facebook.svg" alt="Facebook" loading="lazy" width="30" height="30">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/instagram.svg" alt="Instagram" loading="lazy" width="30" height="30">
+            </a>
+            <a href="https://twitter.com">
+                <img src="images/twitter.svg" alt="Twitter" loading="lazy" width="30" height="30">
+            </a>
+        </nav>
+    </footer>
+</body>
+</html>

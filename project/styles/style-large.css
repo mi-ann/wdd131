@@ -90,19 +90,30 @@ h2 {
 
 .figure-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 20px; /* Space between cards */
-    margin: 0 auto; /* Center the grid */
-    padding: 20px; /* Optional padding */
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 1em; /* Space between items */
+    border: #b87700;
+    max-width: 1200px; /* Max width */
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center */
+    padding: 1em; /* Optional padding */
 }
 
-.temple-card {
+
+.figure-container img, iframe, video {
     width:100%;
     max-width: 400px;
-    border: 1px solid #ccc; /* Optional styling for the cards */
-    border-radius: 5px; /* Optional rounded corners */
-    padding: 10px; /* Optional padding inside cards */
-    text-align: center; /* Center text */
-}
+    height: 400px;
+    
 }
 
+}
+@media (max-width: 1024px) {
+    .figure-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+}
+
+@media (max-width: 430px) {
+    
+}

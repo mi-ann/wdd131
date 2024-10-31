@@ -1,85 +1,137 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Set the current year and last modified date
     const yearElement = document.getElementById('year');
     const lastModifiedElement = document.getElementById('last-modified');
 
     yearElement.textContent = new Date().getFullYear();
     lastModifiedElement.textContent = document.lastModified;
 
-    // Hamburger menu functionality
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('nav-menu');
 
     hamburger.addEventListener('click', () => {
         navMenu.style.display = navMenu.style.display === 'block' ? 'none' : 'block';
-        hamburger.innerHTML = hamburger.innerHTML === '✖' ? '&#9776;' : '✖'; // Toggle hamburger icon
+        hamburger.innerHTML = hamburger.innerHTML === '✖' ? '&#9776;' : '✖';
     });
-    
 
     const artImages = [
         'images/love.webp',
+        'images/unity.webp',
         'images/art-example.webp',
-        'images/unity.webp' ,
-        'images/art3.jpg',
-        // Add more art image paths
+        
     ];
-    
+
     const pianoVideos = [
         'images/love-art.mp4',
-        'images/piano1.jpg',
-        'images/piano2.jpg',
-        'images/piano3.jpg',
-        // Add more piano image paths
+        'https://www.youtube.com/embed/LJ4WNr1qvH8',
     ];
-    
-    const danceImages = [
-        'images/art-example.webp',
-        'images/dance1.jpg',
-        'images/dance2.jpg',
-        'images/dance3.jpg',
-        // Add more dance image paths
-    ];
-    
-    
-    
-    const imagesContainer = document.querySelector('.figure-container');
-    const pianoContainer = document.getElementById('video-container'); // Remove the dot
 
-    function displayImages(images) {
-        imagesContainer.innerHTML = ''; // Clear existing images
+    const danceVideos = [
+        'https://www.youtube.com/embed/_TW5Xo3cqOY?si=p28KyilF09AV-5_b',
+        
+    ];
+    const beginnerArtImages = [
+        'images/beginner-art-example.webp',
+        'images/beginner-art2.jpg',
+        // Add more beginner art image paths
+    ];
+    
+    const beginnerDanceVideos = [
+        'https://www.youtube.com/embed/jjPlqrGv-lA?si=_8y4RHPV1_zS_2-m',
+        'https://www.youtube.com/embed/LmrNle3MfaI?si=BYrBcc9WPHYfSQxh',
+        
+        // Add more beginner dance video paths
+    ];
+    
+    const beginnerPianoVideos = [
+        'https://www.youtube.com/embed/-70Zb0KZu9s?si=Cnnkt99QZP6bAyYw',
+        'https://www.youtube.com/embed/Ou09zz-Cedo?si=s0i5-RhKQIW9eY9M',
+    ];
+
+    function displayArtImages(images, containerId) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = ''; // Clear existing images
         images.forEach(image => {
             const imgElement = document.createElement('img');
             imgElement.src = image;
-            imgElement.alt = 'Image';
-            imagesContainer.appendChild(imgElement);
+            imgElement.alt = 'Art Image';
+            container.appendChild(imgElement);
         });
     }
 
-    function displayVideos(videos) {
-        pianoContainer.innerHTML = ''; // Clear existing videos
-        videos.forEach(videoSrc => {
-            const videoElement = document.createElement('video');
-            videoElement.src = videoSrc;
-            videoElement.controls = true; // Add controls for video playback
-            videoElement.allowFullscreen = true;
-            pianoContainer.appendChild(videoElement);
+    function displayVideos(items, containerId) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = ''; // Clear existing items
+
+        items.forEach(src => {
+            if (src.endsWith('.mp4')) {
+                const videoElement = document.createElement('video');
+                videoElement.src = src; 
+                videoElement.controls = true; 
+                videoElement.style.width = '100%'; 
+                container.appendChild(videoElement);
+            } else if (src.includes('youtube.com')) {
+                const iframeElement = document.createElement('iframe');
+                iframeElement.src = src; 
+                iframeElement.style.width = '100%'; 
+                iframeElement.style.height = '400px'; 
+                iframeElement.frameBorder = '0';
+                iframeElement.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+                iframeElement.referrerPolicy = 'strict-origin-when-cross-origin';
+                iframeElement.allowFullscreen = true;
+
+                container.appendChild(iframeElement);
+            }
         });
     }
 
-    document.querySelector('#art-nav').addEventListener('click', () => {
-        displayImages(artImages);
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => section.classList.add('hidden')); // Hide all sections initially
+
+    function showGallery(galleryId) {
+        sections.forEach(section => section.classList.add('hidden')); // Hide all sections
+        const selectedGallery = document.getElementById(galleryId);
+        if (selectedGallery) {
+            selectedGallery.classList.remove('hidden');
+            console.log(`Showing gallery: ${galleryId}`); // Log the displayed gallery
+            
+            // Load content
+            
+        }
+    }
+
+    // Event listeners for navigation
+    document.getElementById('art-nav').addEventListener('click', () => {
+        displayArtImages(artImages, 'art-container'); // Load images first
+        showGallery('art-gallery', () => {}); // Then show the gallery
+    });
+
+    document.getElementById('dance-nav').addEventListener('click', () => {
+        displayVideos(danceVideos, 'dance-container'); // Load videos first
+        showGallery('dance-gallery', () => {}); // Then show the gallery
+    });
+
+    document.getElementById('piano-nav').addEventListener('click', () => {
+        displayVideos(pianoVideos, 'piano-container'); // Load videos first
+        showGallery('piano-gallery', () => {}); // Then show the gallery
+    });
+    document.getElementById('home').addEventListener('click', () => {
+       
+        showGallery('home-content', () => {}); // Then show the gallery
     });
     
-    document.querySelector('#piano-nav').addEventListener('click', () => {
-        displayVideos(pianoVideos); // Call displayVideos instead
+    document.getElementById('beginner-nav').addEventListener('click', () => {
+        // Clear previous content
+        document.getElementById('beginner-art-container').innerHTML = '';
+        document.getElementById('beginner-dance-container').innerHTML = '';
+        document.getElementById('beginner-piano-container').innerHTML = '';
+
+        // Load beginner content
+        displayArtImages(beginnerArtImages, 'beginner-art-container');
+        displayVideos(beginnerDanceVideos, 'beginner-dance-container');
+        displayVideos(beginnerPianoVideos, 'beginner-piano-container');
+        
+        showGallery('beginner-gallery'); // Show the beginner gallery
     });
-    
-    document.querySelector('#dance-nav').addEventListener('click', () => {
-        displayImages(danceImages); // Display dance images
-    });
-    
-    // Optional: Display art images by default on page load
-    displayImages(artImages);
-    
-     
+   
+    showGallery('home-content')
 });

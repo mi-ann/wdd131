@@ -22,109 +22,150 @@
         <nav>
             <button id="hamburger">&#9776;</button>
             <ul id="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="art.html">Art</a></li>
-                <li><a href="#">Piano</a></li>
-                <li><a href="#">Dance</a></li>
-                <li><a href="beginners.html">Beginners</a></li>
-                <li><a href="join.html">Join Hub </a></li>
+                <li><a href="#" id="home">Home</a></li>
+                <li><a href="#" id="art-nav">Art</a></li>
+                <li><a href="#" id="piano-nav">Piano</a></li>
+                <li><a href="#" id="dance-nav">Dance</a></li>
+                <li><a href="#" id="beginner-nav">Beginners</a></li>
+                <li><a href="join.html">Join Hub</a></li>
         </nav>
     </header>
-    <main>
+    <main >
+        <h2>Creative Hub Gallery</h2>
 
-        <div class="section normal">
-            <aside>
-                <h2>Unleash Your Creativity Through Art and Music</h2>
-                <p>Welcome to your ultimate destination for artistic inspiration! Explore a vibrant collection of art
-                    videos, piano tutorials, and dance performances that ignite your passion and enhance your skills.</p>
-                <div class="cta-buttoncontainer">
-                    <a href="art.html" class="cta-button">Explore Arts Content</a>
-                    <a href="join.html" class="cta-button">Become a Fellow Artsist </a>
-                </div>
-            </aside>
-            <img src="images/art-example.webp" alt="Artwork example" width="400" height="400">
-        </div>
+        <section id="art-gallery" class="hidden">
+            <h2>Art Gallery</h2>
+            <div class="figure-container" id="art-container"></div>
+        </section>
 
+        <section id="dance-gallery" class="hidden">
+            <h2>Dance Gallery</h2>
+            <div class="figure-container" id="dance-container"></div>
+        </section>
 
-        <div class="section normal">
-            <aside>
-                <h2>Discover the Joy of Piano Playing</h2>
-                <p>Immerse yourself in the beauty of our enchanting piano pieces. Listen as talented musicians bring each
-                    note to life and inspire you to learn and play some of our greatest compositions!</p>
-                <div class="cta-buttoncontainer">
-                    <a href="piano.html" class="cta-button">Explore Piano Content</a>
-                    <a href="join.html" class="cta-button">Become a Fellow Pianist </a>
-                </div>
-            </aside>
-            <img src="images/piano-example.webp" alt="Piano example" loading="lazy" width="400" height="300">
+        <section id="piano-gallery" class="hidden">
+            <h2>Piano Gallery</h2>
+            <div class="figure-container" id="piano-container"></div>
+        </section>
 
-        </div>
-
-
-        <div class="section normal">
-            <aside>
-                <h2>Discover the Latest Dance Trends!</h2>
-                <p>Dive into the captivating world of our stunning dance videos! Experience talented performers in action,
-                    igniting your passion for movement—whether you're here to be inspired, learn a new dance, or simply
-                    enjoy some entertainment.</p>
-                <div class="cta-buttoncontainer">
-                    <a href="piano.html" class="cta-button">Explore Dance Content</a>
-                    <a href="join.html" class="cta-button">Become a Fellow Dancer </a>
-                </div>
-            </aside>
-            <img src="images/dance-example.webp" alt="Dance performance" loading="lazy" width="400" height="300">
-
-        </div>
-
-
-        <div class="section">
-            <aside>
-                <h2>Unlock Your Creative Potential: Start Your Journey in Art, Music, or Dance!</h2>
-                <p>Every great artist, pianist, or dancer stance as a beginner. Embrace the journey and discover the joy of
-                    expressing yourself through creativity, one step at a time.</p>
-            </aside>
-            <div class="img-container">
-                <img src="images/beginner-art-example.webp" alt="Beginners art example" loading="lazy" width="100"
-                    height="100">
-                <img src="images/beginner-piano-example.webp" alt="Beginners piano example" loading="lazy" width="100"
-                    height="100">
-                <img src="images/beginner-dance-example.webp" alt="Beginners dance example" loading="lazy" width="100"
-                    height="100">
+        <section id="beginner-gallery" class="hidden">
+        <h2>Beginner Gallery</h2>
+            <div id="beginner-art">
+                <h2>Beginner Art</h2>
+                <div class="figure-container" id="beginner-art-container"></div>
             </div>
-
-        </div>
-
-
-        <div class="section">
-            <aside>
-            <h2>Join Our Community</h2>
-            <p>Subscribe to our blog to receive the latest art, music, and dance content directly in your inbox. Or
-                Become a contributing member and share your own creations with our vibrant community.</p>
-            </aside>
-            <div class="cta-buttoncontainer">
-                <a href="join.html" class="cta-button">Become a Fellow Member </a>
-                <a href="subscribe-form.html" class="cta-button">Subscribe to Hub</a>
+        
+            <div id="beginner-dance" >
+                <h2>Beginner Dance</h2>
+                <div class="figure-container" id="beginner-dance-container"></div>
             </div>
-        </div>
-
-
-        <div class="section">
-            <aside>
-                <h2>Contact Us</h2>
-                <p>Address: Wanica, Suriname</p>
-                <p>Phone number: 88889999</p>
-                <p>Email:mi.che@gmail.com</p>
-            </aside>
-
-            <div class="map">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31757.539183342713!2d-55.2828928!3d5.7573376000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d09cddfeec00531%3A0xa3897b3afae237ed!2sWinkelcentrum%20Koewarasan!5e0!3m2!1snl!2s!4v1720913362320!5m2!1snl!2s"
-                    title="myFrame" width="600" height="450" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+            <div id="beginner-piano" >
+                <h2>Beginner Piano</h2>
+                <div class="figure-container" id="beginner-piano-container"></div>
             </div>
-        </div>
+         </section>
 
-        </div>
+        <section id="home-content">
+            <div class="section normal">
+                <aside>
+                    <h2>Unleash Your Creativity Through Art and Music</h2>
+                    <p>Welcome to your ultimate destination for artistic inspiration! Explore a vibrant collection of art
+                        videos, piano tutorials, and dance performances that ignite your passion and enhance your skills.
+                    </p>
+                    <div class="cta-buttoncontainer">
+                        <a href="art.html" class="cta-button">Explore Arts Content</a>
+                        <a href="join.html" class="cta-button">Become a Fellow Artsist </a>
+                    </div>
+                </aside>
+                <img src="images/art-example.webp" alt="Artwork example" width="400" height="400">
+            </div>
+    
+    
+            <div class="section normal">
+                <aside>
+                    <h2>Discover the Joy of Piano Playing</h2>
+                    <p>Immerse yourself in the beauty of our enchanting piano pieces. Listen as talented musicians bring
+                        each
+                        note to life and inspire you to learn and play some of our greatest compositions!</p>
+                    <div class="cta-buttoncontainer">
+                        <a href="piano.html" class="cta-button">Explore Piano Content</a>
+                        <a href="join.html" class="cta-button">Become a Fellow Pianist </a>
+                    </div>
+                </aside>
+                <img src="images/piano-example.webp" alt="Piano example" loading="lazy" width="400" height="300">
+    
+            </div>
+    
+    
+            <div class="section normal">
+                <aside>
+                    <h2>Discover the Latest Dance Trends!</h2>
+                    <p>Dive into the captivating world of our stunning dance videos! Experience talented performers in
+                        action,
+                        igniting your passion for movement—whether you're here to be inspired, learn a new dance, or simply
+                        enjoy some entertainment.</p>
+                    <div class="cta-buttoncontainer">
+                        <a href="piano.html" class="cta-button">Explore Dance Content</a>
+                        <a href="join.html" class="cta-button">Become a Fellow Dancer </a>
+                    </div>
+                </aside>
+                <img src="images/dance-example.webp" alt="Dance performance" loading="lazy" width="400" height="300">
+    
+            </div>
+    
+    
+            <div class="section">
+                <aside>
+                    <h2>Unlock Your Creative Potential: Start Your Journey in Art, Music, or Dance!</h2>
+                    <p>Every great artist, pianist, or dancer stance as a beginner. Embrace the journey and discover the joy
+                        of
+                        expressing yourself through creativity, one step at a time.</p>
+                </aside>
+                <div class="img-container">
+                    <img src="images/beginner-art-example.webp" alt="Beginners art example" loading="lazy" width="100"
+                        height="100">
+                    <img src="images/beginner-piano-example.webp" alt="Beginners piano example" loading="lazy" width="100"
+                        height="100">
+                    <img src="images/beginner-dance-example.webp" alt="Beginners dance example" loading="lazy" width="100"
+                        height="100">
+                </div>
+    
+            </div>
+    
+    
+            <div class="section">
+                <aside>
+                    <h2>Join Our Community</h2>
+                    <p>Subscribe to our blog to receive the latest art, music, and dance content directly in your inbox. Or
+                        Become a contributing member and share your own creations with our vibrant community.</p>
+                </aside>
+                <div class="cta-buttoncontainer">
+                    <a href="join.html" class="cta-button">Become a Fellow Member </a>
+                    <a href="subscribe-form.html" class="cta-button">Subscribe to Hub</a>
+                </div>
+            </div>
+    
+    
+            <div class="section">
+                <aside>
+                    <h2>Contact Us</h2>
+                    <p>Address: Wanica, Suriname</p>
+                    <p>Phone number: 88889999</p>
+                    <p>Email:mi.che@gmail.com</p>
+                </aside>
+    
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31757.539183342713!2d-55.2828928!3d5.7573376000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8d09cddfeec00531%3A0xa3897b3afae237ed!2sWinkelcentrum%20Koewarasan!5e0!3m2!1snl!2s!4v1720913362320!5m2!1snl!2s"
+                        title="myFrame" width="600" height="450" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+    
+            </div>
+        </section>
+        
     </main>
 
 

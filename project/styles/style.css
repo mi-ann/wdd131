@@ -10,18 +10,21 @@
     --paragraph-font-weight: normal;
 }
 
-body, p {
+body,
+p {
     font-family: var(--paragraph-font);
     font-weight: var(--paragraph-font-weight);
     color: var(--accent-color2);
     font-size: 1em;
 }
-main{
+
+main {
     background-color: var(--primary-color2);
     padding: 10px;
 }
 
-h1, h2 {
+h1,
+h2 {
     font-family: var(--heading-font);
     font-weight: var(--heading-font-weight);
     font-size: 1.5em;
@@ -65,10 +68,10 @@ header {
     align-items: center;
     background-color: var(--primary-color1);
     padding: 1em;
-    
+
 }
 
-.section{
+.section {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -77,6 +80,7 @@ header {
     background-color: black;
     border: 1px solid #FFA500;
     color: white;
+    
 }
 
 .cta-buttoncontainer {
@@ -96,6 +100,7 @@ header {
 .map {
     max-width: 300px;
 }
+
 .map iframe {
     width: 100%;
 }
@@ -129,28 +134,31 @@ main {
 }
 
 main h2 {
-    margin-bottom: 20px; /* Space below the heading */
-    display: block; /* Ensure it takes full width */
+    margin-bottom: 20px;
+    /* Space below the heading */
+    display: block;
+    /* Ensure it takes full width */
 }
 
 
 
-.figure-container  {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1em; /* Space between grid items */
-    border: #b87700;
-}
 
-.figure-container img{
-    width: 400px; /* Set width to 400 pixels */
-    height: auto; /* Maintain aspect ratio */
-    margin: 10px; /* Space between images */
-}
-
-figure {
-    margin: 0; /* Reset margin for figures */
-    text-align: center; /* Center align captions */
+.figure-container img, iframe, video {
     width:100%;
     max-width: 400px;
+    height: auto;
+}
+
+
+
+.figure-container {
+    grid-template-columns: 1fr; /* 1 column */
+}
+
+.hidden {
+    display: none;
+}
+
+section{
+    margin: 0 auto;
 }
