@@ -1,0 +1,156 @@
+:root {
+    --primary-color1: #003366;
+    --primary-color2: black;
+    --accent-color1: #b87700;
+    --accent-color2: #FFFFFF;
+    --accent-color3: #0180ff;
+    --heading-font: 'Roboto', sans-serif;
+    --heading-font-weight: bold;
+    --paragraph-font: 'Roboto', sans-serif;
+    --paragraph-font-weight: normal;
+}
+
+body, p {
+    font-family: var(--paragraph-font);
+    font-weight: var(--paragraph-font-weight);
+    color: var(--accent-color2);
+    font-size: 1em;
+}
+main{
+    background-color: var(--primary-color2);
+    padding: 10px;
+}
+
+h1, h2 {
+    font-family: var(--heading-font);
+    font-weight: var(--heading-font-weight);
+    font-size: 1.5em;
+    color: var(--accent-color2);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+#nav-menu {
+    display: none;
+    list-style-type: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 400;
+}
+
+nav a:hover {
+    background-color: var(--nav-background-color);
+}
+
+#hamburger {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    display: block;
+}
+
+footer,
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color1);
+    padding: 1em;
+    
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 10px;
+    padding: 20px;
+    background-color: black;
+    border: 1px solid #FFA500;
+    color: white;
+}
+
+.cta-buttoncontainer {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cta-button {
+    text-decoration: none;
+    color: white;
+    background-color: var(--primary-color1);
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.map {
+    max-width: 300px;
+}
+.map iframe {
+    width: 100%;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+.img-container img {
+    width: 100%;
+    max-width: 90px;
+    height: auto;
+    margin: 5px;
+}
+
+.normal img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em auto;
+    padding: 1em;
+    margin-top: 20px;
+}
+
+main h2 {
+    margin-bottom: 20px; /* Space below the heading */
+    display: block; /* Ensure it takes full width */
+}
+
+
+
+.figure-container  {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1em; /* Space between grid items */
+    border: #b87700;
+}
+
+.figure-container img{
+    width: 400px; /* Set width to 400 pixels */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px; /* Space between images */
+}
+
+figure {
+    margin: 0; /* Reset margin for figures */
+    text-align: center; /* Center align captions */
+    width:100%;
+    max-width: 400px;
+}

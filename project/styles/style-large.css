@@ -1,0 +1,108 @@
+@media (min-width: 520px) {
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    #nav-menu {
+        display: flex;
+        /* Show menu in larger view */
+    }
+
+    #hamburger {
+        display: none;
+        /* Hide hamburger button */
+    }
+
+    h2 {
+
+        font-size: 2.5em;
+    }
+
+
+
+    .cta-buttoncontainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    aside {
+        text-align: center;
+        grid-column: 1/2;
+        /* Ensure heading spans all columns */
+        margin: 0 auto;
+
+    }
+
+    .section {
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        max-width: 75%;
+        height: auto;
+        margin: 0 auto;
+        font-size: 1.5em;
+        margin-top: 10px;
+
+    }
+
+
+    .normal img {
+        grid-column: 2/3;
+        grid-row: 1/4;
+        align-self: center;
+        margin: 0 auto;
+
+    }
+    .img-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .img-container img {
+
+        max-width: 140px;
+        height: auto;
+        margin: 5px;
+    }
+        
+
+.map {
+    max-width: 800px;
+    height: auto;
+}
+
+main {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+h2 {
+    text-align: center;
+    grid-column: span 3; /* Ensure heading spans all columns */
+    grid-row: 1/2;
+}
+
+.figure-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between cards */
+    margin: 0 auto; /* Center the grid */
+    padding: 20px; /* Optional padding */
+}
+
+.temple-card {
+    width:100%;
+    max-width: 400px;
+    border: 1px solid #ccc; /* Optional styling for the cards */
+    border-radius: 5px; /* Optional rounded corners */
+    padding: 10px; /* Optional padding inside cards */
+    text-align: center; /* Center text */
+}
+}
+
