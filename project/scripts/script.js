@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
     const beginnerArtImages = [
         'images/beginner-art-example.webp',
-        'images/beginner-art2.jpg',
+        'images/beginner-piano-example.webp',
         // Add more beginner art image paths
     ];
     
