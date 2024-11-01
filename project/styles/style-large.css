@@ -1,4 +1,4 @@
-@media (min-width: 520px) {
+@media (min-width: 1300px) {
     nav a {
         color: white;
         text-decoration: none;
@@ -108,7 +108,7 @@ h2 {
 }
 
 }
-@media (max-width: 1280px) {
+@media (min-width: 530px) {
     .figure-container {
         grid-template-columns: repeat(2, 1fr); /* 2 columns */
 
@@ -132,6 +132,3 @@ h2 {
     }
 }
 
-@media (max-width: 430px) {
-    
-}
