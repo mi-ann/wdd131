@@ -7,12 +7,14 @@
         <meta name="description"
             content="WDD 131 - Dynamic Web Fundamentals, Mi-ann Loisa Wirjosentono WDD 131 Website project.">
         <meta name="author" content="Mi-ann Loisa Wirjosentono">
+        <link rel="stylesheet" href="styles/join.css">
         <link rel="stylesheet" href="styles/style.css">
-        <link rel="stylesheet" href="styles/style-large.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+        <script defer src="scripts/form.js"></script>
         <script defer src="scripts/script.js"></script>
+
     </head>
 </head>
 <body>
@@ -22,7 +24,7 @@
     <main>
         <section>
             <h2>Subscribe or Become a Member</h2>
-            <form action="thankyou.html" method="get">
+            <form action="thankyou.html" method="get" class="wf1">
                 <fieldset>
                     <legend>Personal Information</legend>
                     
@@ -39,31 +41,35 @@
                 <fieldset>
                     <legend>Membership Type</legend>
                     
-                    <p>Choose your membership type:</p>
-                    <label>
-                        <input type="radio" name="membership" value="subscribe" required> Subscribe for Updates
-                    </label><br>
-                    <label>
-                        <input type="radio" name="membership" value="member"> Become a Member
-                    </label>
+                    <div class="memberbox">Choose your membership type:</div>
+                    <div class="membership">
+                        <label>
+                            <input type="radio" name="membership" value="subscribe" required> Subscribe for Updates
+                        </label><br>
+                        <label>
+                            <input type="radio" name="membership" value="member" required> Become a Member
+                        </label>
+                    </div>
                 </fieldset>
 
                 <fieldset>
                     <legend>Membership Preferences</legend>
                     
-                    <p>Preferred Type of Membership:</p>
-                    <label>
-                        <input type="radio" name="type" value="art" required> Art
-                    </label><br>
-                    <label>
-                        <input type="radio" name="type" value="dance"> Dance
-                    </label><br>
-                    <label>
-                        <input type="radio" name="type" value="piano"> Piano
-                    </label><br>
-                    <label>
-                        <input type="radio" name="type" value="all"> All
-                    </label>
+                    <div class="memberbox">Preferred Type of Membership:</div>
+                    <div class="membership2">
+                        <label>
+                            <input type="radio" name="membership2" value="art" required> Art
+                        </label><br>
+                        <label>
+                            <input type="radio" name="membership2" value="dance"required> Dance
+                        </label><br>
+                        <label>
+                            <input type="radio" name="membership2" value="piano" required> Piano
+                        </label><br>
+                        <label>
+                            <input type="radio" name="membership2" value="all"required> All
+                        </label>
+                    </div>
                 </fieldset>
 
                 <input type="submit" value="Join Now">

@@ -1,0 +1,96 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+/*----------- apply a natural box layout model to all elements --------------*/
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 0 2%;
+    min-height: 20rem;
+}
+
+/* stars */
+input[type="radio"]{
+    position: relative;
+
+}
+legend{
+    color: #b87700;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.wf1 fieldset {
+    margin: 2rem 0;
+    padding: .5rem 2%;
+    border: 1px solid #b87700;
+}
+
+.wf1 label{
+    display: block;
+    padding: 0 .5rem;
+    margin-top: 20px;
+    color: rgb(255, 202, 202);
+    font-size: normal;
+    
+}
+
+.wf1 .memberbox {
+    font-size: large;
+    font-weight: bold;
+}
+
+
+.wf1 input[type="text"],
+.wf1 input[type="email"],
+.wf1 input[type="tel"] {
+    background-color: #ffffff;
+    display: block;
+    border: solid 1px #b87700;
+    border-radius: 6px;
+    padding: .75rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+
+/* Speciic styles for each checkbox label */
+.membership label,.membership input {
+    font-weight: normal;
+}
+
+    
+.wf1 input[type="submit"] {
+    border: 1px solid;
+    background-image: linear-gradient(#9c2c13, #FFA500);
+    color: #fff;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 96%;
+    max-width: 400px;
+    margin: .5rem 2% 2rem 2.5%;
+    box-shadow: 1px 1px 4px #999;
+}
+
+.wf1 input:required, .membership, .membership2 {
+    border-bottom: solid 8px red;
+}
+
+.wf1 input:required:valid{
+    border-bottom: solid 8px green;
+}
+.membership.valid, .membership2.valid {
+    border-bottom: solid 8px green; /* Green border when valid */
+}
+
