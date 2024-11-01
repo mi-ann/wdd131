@@ -1,4 +1,4 @@
-@media (min-width: 1300px) {
+@media (min-width: 1280px) {
     nav a {
         color: white;
         text-decoration: none;
@@ -56,79 +56,96 @@
         margin: 0 auto;
 
     }
-    .img-container{
+
+    .img-container {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .img-container img {
 
         max-width: 140px;
         height: auto;
         margin: 5px;
     }
-        
-
-.map {
-    max-width: 800px;
-    height: auto;
-}
-
-main {
-    width: auto;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    
-}
-
-h2 {
-    text-align: center;
-    grid-column: span 3; /* Ensure heading spans all columns */
-    grid-row: 1/2;
-}
-
-.figure-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns */
-    gap: 1em; /* Space between items */
-    border: #b87700;
-    max-width: 1200px; /* Max width */
-    width: 100%; /* Full width */
-    margin: 0 auto; /* Center */
-    padding: 1em; /* Optional padding */
-}
 
 
-.figure-container img, iframe, video {
-    width:100%;
-    max-width: 400px;
-    height: 400px;
-    
-}
+    .map {
+        max-width: 800px;
+        height: auto;
+    }
 
-}
-@media (min-width: 530px) {
-    .figure-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    main {
+        width: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
 
     }
-    .img-container{
+
+    h2 {
+        text-align: center;
+        grid-column: span 3;
+        /* Ensure heading spans all columns */
+        grid-row: 1/2;
+    }
+
+    .figure-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* Three columns */
+        gap: 1em;
+        /* Space between items */
+        border: #b87700;
+        max-width: 1200px;
+        /* Max width */
+        width: 100%;
+        /* Full width */
+        margin: 0 auto;
+        /* Center */
+        padding: 1em;
+        /* Optional padding */
+    }
+
+
+    .figure-container img,
+    iframe,
+    video {
+        width: 100%;
+        max-width: 400px;
+        height: 400px;
+
+    }
+
+
+
+}
+
+@media (max-width: 1280px) {
+    .figure-container {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns */
+
+    }
+
+    .img-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+
     .img-container img {
 
         max-width: 400px;
         height: auto;
         margin: 5px;
     }
+
     .section {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 }
-
