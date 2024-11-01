@@ -10,6 +10,10 @@ html {
     box-sizing: border-box;
 }
 
+#nav-menu {
+    display: block;
+    /* Show menu in larger view */
+}
 
 header h1 {
     margin: 0;
@@ -35,6 +39,7 @@ legend{
     margin: 2rem 0;
     padding: .5rem 2%;
     border: 1px solid #b87700;
+    
 }
 
 .wf1 label{
@@ -66,8 +71,9 @@ legend{
 
 
 /* Speciic styles for each checkbox label */
-.membership label,.membership input {
+.membership input {
     font-weight: normal;
+    
 }
 
     
